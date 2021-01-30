@@ -1,0 +1,20 @@
+{
+  "name": "marlenehollands",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "lint": "eslint \"src/**/*.{vue,js}\"",
+    "prettier": "prettier --write \"./src/**/*.{js,json,ts,vue}\" \"./*.{js,json,ts,vue}\"",
+    "prettier-check": "prettier --check \"./src/**/*.{js,json,ts,vue}\" \"./*.{js,json,ts,vue}\""
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "prettier": "^2.2.1"
+  }
+}
