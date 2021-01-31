@@ -1,0 +1,101 @@
+$primary-color: #173f5f;
+$primary-color-light: lighten($primary-color, 8%);
+$primary-color-x-light: lighten($primary-color, 60%);
+$primary-color-xx-light: lighten($primary-color, 64%);
+$primary-color-dark: darken($primary-color, 18%);
+$primary-color-x-dark: darken($primary-color, 60%);
+$primary-color-xx-dark: darken($primary-color, 18%);
+
+$accent-color: $primary-color;
+$accent-color-light: $primary-color-light;
+$accent-color-x-light: $primary-color-x-light;
+$accent-color-xx-light: $primary-color-xx-light;
+$accent-color-dark: $primary-color-dark;
+
+$danger-color: darken(red, 12%);
+
+$font-color-default: #333333;
+$font-color-light: lighten($font-color-default, 16%);
+$font-color-dark: darken($font-color-default, 10%);
+$font-color-white: #E0E0E0;
+$font-color-white-light: lighten($font-color-white, 10%);
+$font-color-white-dark: darken($font-color-white, 10%);
+$font-family-default: "Poppins", Arial, sans-serif;
+$font-family-header-default: "Poppins", Arial, sans-serif;
+
+$font-color-secondary: #707070;
+
+$tabs-border-bottom-width: 1px;
+$tabs-border-bottom-color-hover: $font-color-white-light;
+$tabs-border-bottom-color-selected: $font-color-white;
+
+$background-color-default: #FFFFFF;
+$background-color-alternate: $primary-color-xx-light;
+$background-color-dark: $primary-color-xx-dark;
+
+$border-radius-default: 12px;
+$border-radius-small: 6px;
+
+$border-radius-image: $border-radius-default;
+
+$font-size-xs: 8px;
+$font-size-s: 12px;
+$font-size-m: 16px;
+$font-size-l: 24px;
+$font-size-xl: 32px;
+$font-size-xxl: 36px;
+
+$font-size-default: $font-size-m;
+
+$line-height-xs: 12px;
+$line-height-s: 16px;
+$line-height-m: 24px;
+$line-height-l: 32px;
+$line-height-xl: 40px;
+$line-height-xxl: 48px;
+
+$size-xs: 8px;
+$size-s: 16px;
+$size-m: 24px;
+$size-l: 32px;
+$size-xl: 48px;
+$size-xxl: 64px;
+
+$space-xs: 8px;
+$space-s: 16px;
+$space-m: 24px;
+$space-l: 32px;
+$space-xl: 48px;
+$space-xxl: 64px;
+
+$max-content-width: 1180px;
+$max-hero-image-width: 1440px;
+
+$max-width-mobile: 567.98px;
+$max-width-mobile-landscape: 767.98px;
+$max-width-tablet: 991.98px;
+$max-width-desktop: 1199.98px;
+$min-width-desktop-large: 1200px;
+
+$button-font-size: $font-size-default;
+$button-border-radius: $border-radius-small;
+$button-padding: $space-xs;
+
+$primary-button-color: #FFFFFF;
+$primary-button-background-color: $accent-color;
+$primary-button-hover-background-color: $accent-color-light;
+$primary-button-active-background-color: $accent-color-dark;
+
+$secondary-button-color: $accent-color;
+$secondary-button-background-color: transparent;
+$secondary-button-hover-background-color: $accent-color-xx-light;
+$secondary-button-active-background-color: $accent-color-x-light;
+
+$black: #333333;
+$light-gray: #F5F5F5;
+$dark-gray: darken(#F5F5F5, 60%);
+$shadow-default-color: #BBBBBB;
+
+$input-background-color-default: #F5F5F5;
+$background-color-gray: $light-gray;
+$background-color-black: $black;

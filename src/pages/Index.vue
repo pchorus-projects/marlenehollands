@@ -1,11 +1,12 @@
 <template>
   <Layout>
-    <h1>Marlene Hollands</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
-      tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
+    <section class="u-max-page-width u-margin-top-xl">
+      <h1 class="heading heading--xxl heading--xxl-paragraph">Homepage</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
+        tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+      </p>
+    </section>
   </Layout>
 </template>
 
