@@ -8,5 +8,18 @@ module.exports = {
   siteName: 'Marlene Hollands',
   siteUrl: 'https://marlenehollands.de',
   siteDescription: 'Malerei',
-  plugins: [],
+  plugins: [
+    {
+      use: 'gridsome-source-graphql-prismic',
+      options: {
+        url: 'https://marlenehollands.prismic.io',
+        fieldName: 'prismic',
+        typeName: 'prismic',
+        headers: {
+          'Prismic-Ref': process.env.PRISMIC_REF,
+          Authorization: `Token ${process.env.PRISMIC_TOKEN}`,
+        },
+      },
+    },
+  ],
 };
