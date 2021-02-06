@@ -11,6 +11,32 @@ module.exports = function (api) {
   });
 
   api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+    api.createPages(async ({ graphql, createPage }) => {
+      const { data } = await graphql(`
+        query {
+          prismic {
+            aquarelle: allAquarells(sortBy: title_ASC) {
+              edges {
+                node {
+                  _meta {
+                    uid
+                  }
+                }
+              }
+            }
+          }
+        }
+      `);
+
+      data.prismic.aquarelle.edges.forEach(({ node }) => {
+        createPage({
+          path: `/aquarelle/${node._meta.uid}/`,
+          component: './src/templates/Aquarell.vue',
+          context: {
+            uid: node._meta.uid,
+          },
+        });
+      });
+    });
   });
 };

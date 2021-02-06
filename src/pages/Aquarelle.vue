@@ -10,14 +10,13 @@
     <section class="u-max-page-width u-margin-bottom-xl">
       <ul class="image-list">
         <li class="image-item" v-for="edge in $page.prismic.aquarelle.edges" :key="edge.node.id">
-          <img class="image-item__image" :src="edge.node.image.thumbnail.url" :alt="edge.node.title" />
+          <img class="image-item__image" :src="edge.node.image.thumbnail.url" :alt="edge.node.title[0].text" />
           <div class="image-item__content">
             <p class="image-item__title">{{ edge.node.title[0].text }}</p>
             <p class="image-item__text">
               <span> {{ edge.node.width }} x {{ edge.node.height }} </span>
               <span>{{ edge.node.available ? 'verfügbar' : 'nicht verfügbar' }}</span>
             </p>
-            <p class="image-item__available"></p>
           </div>
         </li>
       </ul>
@@ -28,9 +27,12 @@
 <page-query>
 query Aquarelle {
   prismic {
-    aquarelle: allAquarells {
+    aquarelle: allAquarells(sortBy: title_ASC) {
       edges {
         node {
+          _meta {
+            uid
+          }
           date
           image
           title
