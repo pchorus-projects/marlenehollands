@@ -1,0 +1,26 @@
+{
+  "name": "marlenehollands",
+  "private": true,
+  "scripts": {
+    "build": "PRISMIC_REF=$(node scripts/prismic-master-ref.js) gridsome build",
+    "develop": "PRISMIC_REF=$(node scripts/prismic-master-ref.js) gridsome develop",
+    "explore": "gridsome explore",
+    "lint": "eslint \"src/**/*.{vue,js}\"",
+    "prettier": "prettier --write \"./src/**/*.{js,json,ts,vue}\" \"./*.{js,json,ts,vue}\"",
+    "prettier-check": "prettier --check \"./src/**/*.{js,json,ts,vue}\" \"./*.{js,json,ts,vue}\""
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "vue-gtag": "^1.10.0"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.18.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "gridsome-source-graphql-prismic": "^0.1.6",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sass-loader": "^10.1.1"
+  }
+}
