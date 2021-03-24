@@ -25,7 +25,14 @@
             <p class="gallery-thumbnail__title">{{ item.title }}</p>
             <p class="gallery-thumbnail__text">
               <span> {{ item.width }} x {{ item.height }} </span>
-              <span>{{ getAvailableText(item.available) }}</span>
+              <a
+                class="gallery-thumbnail__request-link"
+                v-if="item.available"
+                :href="getRequestImageHref(item)"
+                @click="onRequestImageClick"
+                >Anfragen</a
+              >
+              <span v-else>nicht verfügbar</span>
             </p>
           </div>
         </a>
@@ -309,6 +316,21 @@ export default {
     getAvailableText(isAvailable) {
       return isAvailable ? 'verfügbar' : 'nicht verfügbar';
     },
+    onRequestImageClick(event) {
+      event.cancelBubble = true;
+    },
+    getRequestImageHref(item) {
+      const email = 'marlene@4xhollands.de';
+      const subject = encodeURIComponent(`Anfrage für "${item.title}"`);
+      const body = encodeURIComponent(`Sehr geehrte Frau Hollands,
+
+ich interessiere mich für das Bild "${item.title}", ${item.width} x ${item.height}.
+Bitte kontaktieren Sie mich diesbezüglich.
+
+Freundliche Grüße
+`);
+      return `mailto:${email}?subject=${subject}&body=${body}`;
+    },
   },
 };
 </script>
@@ -375,6 +397,17 @@ export default {
     color: $font-color-white-dark;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__request-link {
+    color: $font-color-default;
+    background-color: $accent-color-x-light;
+    padding: 0 4px;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $accent-color-xx-light;
+    }
   }
 }
 
