@@ -32,15 +32,6 @@
         "label": "Höhe"
       }
     },
-    "available": {
-      "type": "Boolean",
-      "config": {
-        "placeholder_false": "Nein",
-        "placeholder_true": "Ja",
-        "default_value": false,
-        "label": "Verfügbar"
-      }
-    },
     "image": {
       "type": "Image",
       "config": {

@@ -25,14 +25,9 @@
             <p class="gallery-thumbnail__title">{{ item.title }}</p>
             <p class="gallery-thumbnail__text">
               <span> {{ item.width }} x {{ item.height }} </span>
-              <a
-                class="gallery-thumbnail__request-link"
-                v-if="item.available"
-                :href="getRequestImageHref(item)"
-                @click="onRequestImageClick"
+              <a class="gallery-thumbnail__request-link" :href="getRequestImageHref(item)" @click="onRequestImageClick"
                 >Anfragen</a
               >
-              <span v-else>nicht verfügbar</span>
             </p>
           </div>
         </a>
@@ -264,9 +259,7 @@ export default {
 
         options.addCaptionHTMLFn = function (item, captionEl /*, isFake*/) {
           const foundItem = that.items.find((curr) => curr.id === item.el.id);
-          captionEl.children[0].innerHTML = `${foundItem.title}, ${foundItem.width} x ${
-            foundItem.height
-          }, ${that.getAvailableText(foundItem.available)}`;
+          captionEl.children[0].innerHTML = `${foundItem.title}, ${foundItem.width} x ${foundItem.height}`;
           return true;
         };
 
@@ -312,9 +305,6 @@ export default {
     resetAngle() {
       this.angle = 0;
       this.$el.querySelectorAll('.pswp__img').forEach((i) => (i.style.transform = `rotate(${this.angle}deg)`));
-    },
-    getAvailableText(isAvailable) {
-      return isAvailable ? 'verfügbar' : 'nicht verfügbar';
     },
     onRequestImageClick(event) {
       event.cancelBubble = true;

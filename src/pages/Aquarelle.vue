@@ -28,7 +28,6 @@ query Aquarelle {
           description
           width
           height
-          available
         }
       }
     }
@@ -59,7 +58,6 @@ export default {
         title: node.title[0].text,
         width: node.width,
         height: node.height,
-        available: node.available,
         src: node.image.url,
         thumbnail: node.image.thumbnail.url,
         imageWidth: node.image.dimensions.width,
