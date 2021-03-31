@@ -24,7 +24,7 @@
           <div class="gallery-thumbnail__content">
             <p class="gallery-thumbnail__title">{{ item.title }}</p>
             <p class="gallery-thumbnail__text">
-              <span> {{ item.width }} x {{ item.height }} </span>
+              <span>{{ item.height }} x {{ item.width }}</span>
               <a class="gallery-thumbnail__request-link" :href="getRequestImageHref(item)" @click="onRequestImageClick"
                 >Anfragen</a
               >
@@ -259,7 +259,7 @@ export default {
 
         options.addCaptionHTMLFn = function (item, captionEl /*, isFake*/) {
           const foundItem = that.items.find((curr) => curr.id === item.el.id);
-          captionEl.children[0].innerHTML = `${foundItem.title}, ${foundItem.width} x ${foundItem.height}`;
+          captionEl.children[0].innerHTML = `${foundItem.title}, ${foundItem.height} x ${foundItem.width}`;
           return true;
         };
 
@@ -314,7 +314,7 @@ export default {
       const subject = encodeURIComponent(`Anfrage für "${item.title}"`);
       const body = encodeURIComponent(`Sehr geehrte Frau Hollands,
 
-ich interessiere mich für das Bild "${item.title}", ${item.width} x ${item.height}.
+ich interessiere mich für das Bild "${item.title}", ${item.height} x ${item.width}.
 Bitte kontaktieren Sie mich diesbezüglich.
 
 Freundliche Grüße

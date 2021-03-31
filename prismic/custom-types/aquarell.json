@@ -20,16 +20,16 @@
         "label": "Datum"
       }
     },
-    "width": {
-      "type": "Number",
-      "config": {
-        "label": "Breite"
-      }
-    },
     "height": {
       "type": "Number",
       "config": {
         "label": "Höhe"
+      }
+    },
+    "width": {
+      "type": "Number",
+      "config": {
+        "label": "Breite"
       }
     },
     "image": {
