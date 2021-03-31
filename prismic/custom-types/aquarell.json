@@ -43,18 +43,18 @@
       "config": {
         "constraint": {
           "width": null,
-          "height": null
+          "height": 2160
         },
         "thumbnails": [
           {
             "name": "thumbnail",
-            "width": 400,
-            "height": 400
+            "width": 300,
+            "height": 300
           },
           {
-            "name": "mobile",
-            "width": 800,
-            "height": null
+            "name": "thumbnailx2",
+            "width": 600,
+            "height": 600
           }
         ],
         "label": "Bild"

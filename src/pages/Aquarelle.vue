@@ -60,6 +60,7 @@ export default {
         width: node.width,
         src: node.image.url,
         thumbnail: node.image.thumbnail.url,
+        thumbnailx2: node.image.thumbnailx2.url,
         imageHeight: node.image.dimensions.height,
         imageWidth: node.image.dimensions.width,
       };

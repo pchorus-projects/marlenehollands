@@ -20,7 +20,12 @@
           :data-size="'' + item.imageWidth + 'x' + item.imageHeight"
           :title="item.title"
         >
-          <img class="gallery-thumbnail__image" :src="item.thumbnail" :alt="item.title" itemprop="thumbnail" />
+          <img
+            class="gallery-thumbnail__image"
+            :srcset="`${item.thumbnail} 1x, ${item.thumbnailx2} 2x`"
+            :alt="item.title"
+            itemprop="thumbnail"
+          />
           <div class="gallery-thumbnail__content">
             <p class="gallery-thumbnail__title">{{ item.title }}</p>
             <p class="gallery-thumbnail__text">
