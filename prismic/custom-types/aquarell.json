@@ -1,5 +1,11 @@
 {
   "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "ID"
+      }
+    },
     "title": {
       "type": "StructuredText",
       "config": {
@@ -20,25 +26,16 @@
         "label": "Datum"
       }
     },
-    "width": {
-      "type": "Number",
-      "config": {
-        "label": "Breite"
-      }
-    },
     "height": {
       "type": "Number",
       "config": {
         "label": "Höhe"
       }
     },
-    "available": {
-      "type": "Boolean",
+    "width": {
+      "type": "Number",
       "config": {
-        "placeholder_false": "Nein",
-        "placeholder_true": "Ja",
-        "default_value": false,
-        "label": "Verfügbar"
+        "label": "Breite"
       }
     },
     "image": {
@@ -46,18 +43,18 @@
       "config": {
         "constraint": {
           "width": null,
-          "height": null
+          "height": 2160
         },
         "thumbnails": [
           {
             "name": "thumbnail",
-            "width": 400,
-            "height": 400
+            "width": 300,
+            "height": 300
           },
           {
-            "name": "mobile",
-            "width": 800,
-            "height": null
+            "name": "thumbnailx2",
+            "width": 600,
+            "height": 600
           }
         ],
         "label": "Bild"

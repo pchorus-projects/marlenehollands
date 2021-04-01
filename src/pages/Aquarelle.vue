@@ -26,9 +26,8 @@ query Aquarelle {
           image
           title
           description
-          width
           height
-          available
+          width
         }
       }
     }
@@ -57,13 +56,13 @@ export default {
       return {
         id: node._meta.uid,
         title: node.title[0].text,
-        width: node.width,
         height: node.height,
-        available: node.available,
+        width: node.width,
         src: node.image.url,
         thumbnail: node.image.thumbnail.url,
-        imageWidth: node.image.dimensions.width,
+        thumbnailx2: node.image.thumbnailx2.url,
         imageHeight: node.image.dimensions.height,
+        imageWidth: node.image.dimensions.width,
       };
     });
   },

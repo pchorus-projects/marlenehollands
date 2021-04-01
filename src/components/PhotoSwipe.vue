@@ -20,12 +20,19 @@
           :data-size="'' + item.imageWidth + 'x' + item.imageHeight"
           :title="item.title"
         >
-          <img class="gallery-thumbnail__image" :src="item.thumbnail" :alt="item.title" itemprop="thumbnail" />
+          <img
+            class="gallery-thumbnail__image"
+            :srcset="`${item.thumbnail} 1x, ${item.thumbnailx2} 2x`"
+            :alt="item.title"
+            itemprop="thumbnail"
+          />
           <div class="gallery-thumbnail__content">
             <p class="gallery-thumbnail__title">{{ item.title }}</p>
             <p class="gallery-thumbnail__text">
-              <span> {{ item.width }} x {{ item.height }} </span>
-              <span>{{ getAvailableText(item.available) }}</span>
+              <span>{{ item.height }} x {{ item.width }}</span>
+              <a class="gallery-thumbnail__request-link" :href="getRequestImageHref(item)" @click="onRequestImageClick"
+                >Anfragen</a
+              >
             </p>
           </div>
         </a>
@@ -44,7 +51,6 @@
           <div class="pswp__top-bar">
             <div class="pswp__counter"></div>
             <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-            <button class="pswp__button pswp__button--share" title="Share"></button>
             <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
             <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
             <div class="pswp__preloader">
@@ -54,9 +60,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-            <div class="pswp__share-tooltip"></div>
           </div>
           <button
             class="pswp__button pswp__button--arrow--left"
@@ -257,9 +260,7 @@ export default {
 
         options.addCaptionHTMLFn = function (item, captionEl /*, isFake*/) {
           const foundItem = that.items.find((curr) => curr.id === item.el.id);
-          captionEl.children[0].innerHTML = `${foundItem.title}, ${foundItem.width} x ${
-            foundItem.height
-          }, ${that.getAvailableText(foundItem.available)}`;
+          captionEl.children[0].innerHTML = `${foundItem.title}, ${foundItem.height} x ${foundItem.width}`;
           return true;
         };
 
@@ -306,8 +307,20 @@ export default {
       this.angle = 0;
       this.$el.querySelectorAll('.pswp__img').forEach((i) => (i.style.transform = `rotate(${this.angle}deg)`));
     },
-    getAvailableText(isAvailable) {
-      return isAvailable ? 'verfügbar' : 'nicht verfügbar';
+    onRequestImageClick(event) {
+      event.cancelBubble = true;
+    },
+    getRequestImageHref(item) {
+      const email = 'marlene@4xhollands.de';
+      const subject = encodeURIComponent(`Anfrage für "${item.title}"`);
+      const body = encodeURIComponent(`Sehr geehrte Frau Hollands,
+
+ich interessiere mich für das Bild "${item.title}", ${item.height} x ${item.width}.
+Bitte kontaktieren Sie mich diesbezüglich.
+
+Freundliche Grüße
+`);
+      return `mailto:${email}?subject=${subject}&body=${body}`;
     },
   },
 };
@@ -375,6 +388,17 @@ export default {
     color: $font-color-white-dark;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__request-link {
+    color: $font-color-default;
+    background-color: $accent-color-x-light;
+    padding: 0 4px;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $accent-color-xx-light;
+    }
   }
 }
 
