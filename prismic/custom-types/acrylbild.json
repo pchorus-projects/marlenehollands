@@ -1,0 +1,71 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "ID"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Titel"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Beschreibung"
+      }
+    },
+    "date": {
+      "type": "Date",
+      "config": {
+        "label": "Datum"
+      }
+    },
+    "height": {
+      "type": "Number",
+      "config": {
+        "label": "Höhe"
+      }
+    },
+    "width": {
+      "type": "Number",
+      "config": {
+        "label": "Breite"
+      }
+    },
+    "technique": {
+      "type": "Select",
+      "config": {
+        "options": ["Technik 1", "Technik 2"],
+        "label": "Technik"
+      }
+    },
+    "image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": null,
+          "height": 2160
+        },
+        "thumbnails": [
+          {
+            "name": "thumbnail",
+            "width": 300,
+            "height": 300
+          },
+          {
+            "name": "thumbnailx2",
+            "width": 600,
+            "height": 600
+          }
+        ],
+        "label": "Bild"
+      }
+    }
+  }
+}
