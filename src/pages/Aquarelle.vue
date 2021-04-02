@@ -42,9 +42,9 @@ import PhotoSwipe from '../components/PhotoSwipe';
 export default {
   components: { PhotoSwipe },
   metaInfo: getMetaInfo(
-    'Galerie',
+    'Aquarelle',
     // TODO: Fix description text.
-    'Galerie'
+    'Aquarelle'
   ),
   data() {
     return {
