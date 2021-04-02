@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
-      <h1 class="heading heading--xxl heading--xxl-paragraph">Aquarelle</h1>
+      <h1 class="heading heading--xxl heading--xxl-paragraph">Grußkarten</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
         tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
@@ -14,9 +14,9 @@
 </template>
 
 <page-query>
-query Aquarelle {
+query Grusskarten {
   prismic {
-    aquarelle: allAquarells(sortBy: title_ASC) {
+    grusskarten: allGrusskartes(sortBy: title_ASC) {
       edges {
         node {
           _meta {
@@ -26,8 +26,6 @@ query Aquarelle {
           image
           title
           description
-          height
-          width
         }
       }
     }
@@ -42,9 +40,9 @@ import PhotoSwipe from '../components/PhotoSwipe';
 export default {
   components: { PhotoSwipe },
   metaInfo: getMetaInfo(
-    'Aquarelle',
+    'Grußkarten',
     // TODO: Fix description text.
-    'Aquarelle'
+    'Grußkarten'
   ),
   data() {
     return {
@@ -52,12 +50,10 @@ export default {
     };
   },
   mounted() {
-    this.items = this.$page.prismic.aquarelle.edges.map(({ node }) => {
+    this.items = this.$page.prismic.grusskarten.edges.map(({ node }) => {
       return {
         id: node._meta.uid,
         title: node.title[0].text,
-        height: node.height,
-        width: node.width,
         src: node.image.url,
         thumbnail: node.image.thumbnail.url,
         thumbnailx2: node.image.thumbnailx2.url,

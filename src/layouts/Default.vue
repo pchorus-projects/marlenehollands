@@ -56,6 +56,10 @@ export default {
           to: '/aquarelle/',
         },
         {
+          name: 'Grußkarten',
+          to: '/grusskarten/',
+        },
+        {
           name: 'Über mich',
           to: '/ueber-mich/',
         },
