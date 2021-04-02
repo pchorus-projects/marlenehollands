@@ -30,6 +30,7 @@
             <div class="gallery-thumbnail__content">
               <div class="gallery-thumbnail__text">
                 <p class="gallery-thumbnail__title">{{ item.title }}</p>
+                <p v-if="item.technique">{{ item.technique }}</p>
                 <p v-if="item.height && item.width">{{ item.height }} x {{ item.width }}</p>
               </div>
               <a class="gallery-thumbnail__request-link" :href="getRequestImageHref(item)" @click="onRequestImageClick"
@@ -262,10 +263,9 @@ export default {
 
         options.addCaptionHTMLFn = function (item, captionEl /*, isFake*/) {
           const foundItem = that.items.find((curr) => curr.id === item.el.id);
-          captionEl.children[0].innerHTML =
-            foundItem.height && foundItem.width
-              ? `${foundItem.title}, ${foundItem.height} x ${foundItem.width}`
-              : foundItem.title;
+          const technique = foundItem.technique ? `, ${foundItem.technique}` : '';
+          const dimensions = foundItem.height && foundItem.width ? `, ${foundItem.height} x ${foundItem.width}` : '';
+          captionEl.children[0].innerHTML = `${foundItem.title}${technique}${dimensions}`;
           return true;
         };
 
