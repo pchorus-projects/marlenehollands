@@ -26,14 +26,16 @@
             :alt="item.title"
             itemprop="thumbnail"
           />
-          <div class="gallery-thumbnail__content">
-            <p class="gallery-thumbnail__title">{{ item.title }}</p>
-            <p class="gallery-thumbnail__text">
-              <span>{{ item.height }} x {{ item.width }}</span>
+          <div class="gallery-thumbnail__overlay">
+            <div class="gallery-thumbnail__content">
+              <div class="gallery-thumbnail__text">
+                <p class="gallery-thumbnail__title">{{ item.title }}</p>
+                <p v-if="item.height && item.width">{{ item.height }} x {{ item.width }}</p>
+              </div>
               <a class="gallery-thumbnail__request-link" :href="getRequestImageHref(item)" @click="onRequestImageClick"
                 >Anfragen</a
               >
-            </p>
+            </div>
           </div>
         </a>
       </figure>
@@ -260,7 +262,10 @@ export default {
 
         options.addCaptionHTMLFn = function (item, captionEl /*, isFake*/) {
           const foundItem = that.items.find((curr) => curr.id === item.el.id);
-          captionEl.children[0].innerHTML = `${foundItem.title}, ${foundItem.height} x ${foundItem.width}`;
+          captionEl.children[0].innerHTML =
+            foundItem.height && foundItem.width
+              ? `${foundItem.title}, ${foundItem.height} x ${foundItem.width}`
+              : foundItem.title;
           return true;
         };
 
@@ -348,7 +353,7 @@ Freundliche Grüße
   position: relative;
 
   &:hover {
-    .gallery-thumbnail__content {
+    .gallery-thumbnail__overlay {
       opacity: 1;
     }
   }
@@ -362,7 +367,7 @@ Freundliche Grüße
     border-radius: $border-radius-small;
   }
 
-  &__content {
+  &__overlay {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -379,15 +384,19 @@ Freundliche Grüße
     border-radius: $border-radius-small;
   }
 
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: $font-size-s;
+  }
+
   &__title {
     font-size: $font-size-m;
   }
 
   &__text {
-    font-size: $font-size-s;
     color: $font-color-white-dark;
-    display: flex;
-    justify-content: space-between;
   }
 
   &__request-link {
