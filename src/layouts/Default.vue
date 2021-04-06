@@ -215,7 +215,7 @@ export default {
   }
 }
 
-@media (max-width: $max-width-mobile-landscape) {
+@media (max-width: $max-width-tablet) {
   .menu-button {
     display: block;
   }
