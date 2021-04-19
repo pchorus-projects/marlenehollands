@@ -3,8 +3,9 @@
     <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
       <h1 class="heading heading--xxl heading--xxl-paragraph">Acrylbilder</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
-        tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+        Acryl ist eine wunderbare Malfarbe, die mit vielen Malmitteln durch Mischtechniken zu verwenden ist, z.B.
+        Strukturpaste, Sand, Kaffee, Papier, Fotos, Naturmaterialien. Alles ist möglich. Der Fantasie ist kaum eine
+        Grenze gesetzt.
       </p>
     </section>
     <section class="u-max-page-width u-margin-bottom-xl">

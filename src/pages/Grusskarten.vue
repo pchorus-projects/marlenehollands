@@ -3,8 +3,8 @@
     <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
       <h1 class="heading heading--xxl heading--xxl-paragraph">Grußkarten</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
-        tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+        Glückwünsche auf Karten mit Engeln zu übermitteln ist immer wieder eine wunderbare Möglichkeit, das Besondere
+        hervorzuheben!
       </p>
     </section>
     <section class="u-max-page-width u-margin-bottom-xl">

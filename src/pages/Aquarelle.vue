@@ -3,8 +3,10 @@
     <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
       <h1 class="heading heading--xxl heading--xxl-paragraph">Aquarelle</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
-        tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+        Die Aquarellmalerei ist eine sehr vielseitige Maltechnik, sie besticht durch ihre Tiefe und Leuchtkraft. Die
+        leuchtende und lebendige Qualität kann mit einigen Techniken, z.B. Trocken-auf Nass; Nass-auf-Trocken;
+        Trocken-auf-Trocken; Nass-in-Nass auf Papier oder Keilrahmen ausgeführt werden. Es können auch noch diverse
+        Zusätze wie Salz, Folie oder Alkohol mit ins Spiel gebracht werden.
       </p>
     </section>
     <section class="u-max-page-width u-margin-bottom-xl">
