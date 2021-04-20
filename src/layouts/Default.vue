@@ -68,6 +68,10 @@ export default {
           to: '/ueber-mich/',
         },
         {
+          name: 'Termine',
+          to: '/termine/',
+        },
+        {
           name: 'Kontakt',
           to: '/kontakt/',
         },
