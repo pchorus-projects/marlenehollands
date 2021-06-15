@@ -131,6 +131,7 @@ export default {
   justify-content: space-between;
 
   &__link {
+    font-weight: 300;
     font-size: $font-size-xl;
     color: $font-color-white;
     display: block;
