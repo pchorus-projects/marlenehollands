@@ -7,7 +7,8 @@
 module.exports = {
   siteName: 'Marlene Hollands',
   siteUrl: 'https://marlenehollands.de',
-  siteDescription: 'Malerei',
+  chainWebpack: (config) => config.resolve.alias.set('@assets', '@/assets'),
+  siteDescription: 'Kunst & Malerei',
   plugins: [
     {
       use: 'gridsome-source-graphql-prismic',

@@ -2,7 +2,7 @@
   <Layout>
     <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
       <h1 class="heading heading--xxl heading--xxl-paragraph">Acrylbilder</h1>
-      <p>
+      <p class="u-font-m">
         Acryl ist eine wunderbare Malfarbe, die mit vielen Malmitteln durch Mischtechniken zu verwenden ist, z.B.
         Strukturpaste, Sand, Kaffee, Papier, Fotos, Naturmaterialien. Alles ist möglich. Der Fantasie ist kaum eine
         Grenze gesetzt.

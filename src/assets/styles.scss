@@ -1,10 +1,10 @@
 @import 'variables';
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Roboto:wght@300;400;700&display=swap');
 
 body {
   font-family: $font-family-default;
-  font-weight: 300;
+  font-weight: 400;
   color: $font-color-default;
   margin: 0;
   padding: 0;
@@ -57,12 +57,26 @@ li {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.link {
+  &::after {
+    content: '➜';
+    margin-left: $space-xxs;
+  }
+
+  &[target="_blank"]::after {
+    transform: rotate(-45deg);
+    display: inline-block;
+  }
 }
 
 .image {
   width: 420px;
-  border-radius: $border-radius-image;
+  height: 280px;
+  object-fit: cover;
+  border-radius: $border-radius-default;
 }
 
 .button {
@@ -289,6 +303,7 @@ strong {
   }
 
   &--xl {
+    color: $accent-color;
     @extend .u-font-xl;
     &-paragraph {
       @extend .u-font-xl--paragraph;
@@ -296,15 +311,25 @@ strong {
   }
 
   &--xxl {
+    color: $accent-color;
     @extend .u-font-xxl;
     &-paragraph {
       @extend .u-font-xxl--paragraph;
     }
   }
+
+  &--hero {
+    position: absolute;
+    color: $accent-color;
+    font-size: 80px;
+    line-height: 96px;
+    bottom: 120px;
+    right: 80px;
+  }
 }
 
 .section {
-  padding: $space-xl 0;
+  padding: $space-xxl 0;
   &--alternate {
     background-color: $background-color-alternate;
   }
@@ -377,8 +402,8 @@ strong {
   }
 }
 
-.u-background-gray {
-  background-color: $background-color-gray;
+.u-block {
+  display: block;
 }
 
 .text-block {
@@ -423,12 +448,41 @@ strong {
   }
 }
 
+@media (max-width: $max-width-tablet) {
+  .heading {
+    &--hero {
+      bottom: 80px;
+    }
+  }
+}
+
 @media (max-width: $max-width-mobile-landscape) {
+  .heading {
+    &--hero {
+      font-size: 64px;
+      line-height: 72px;
+      bottom: 40px;
+      right: 80px;
+    }
+  }
+
   .u-text-columns {
     flex-direction: column;
     :not(:last-child) {
       margin-right: 0;
       margin-bottom: $space-xl;
+    }
+  }
+}
+
+@media (max-width: $max-width-mobile) {
+  .heading {
+    &--hero {
+      font-size: 40px;
+      line-height: 56px;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
     }
   }
 }

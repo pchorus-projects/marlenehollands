@@ -2,7 +2,7 @@
   <Layout>
     <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
       <h1 class="heading heading--xxl heading--xxl-paragraph">Termine</h1>
-      <p>
+      <p class="u-font-m">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
         tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
       </p>
@@ -13,7 +13,7 @@
           <p class="heading heading--l heading--xs-paragraph">{{ yearAndDates.year }}</p>
           <ul v-for="date in yearAndDates.dates" :key="`${date.title}-${date.year}`">
             <li>
-              <a v-if="date.link" :href="date.link" target="_blank" rel="noopener">{{ date.title }}</a>
+              <a class="link" v-if="date.link" :href="date.link" target="_blank" rel="noopener">{{ date.title }}</a>
               <span v-else>{{ date.title }}</span>
             </li>
           </ul>

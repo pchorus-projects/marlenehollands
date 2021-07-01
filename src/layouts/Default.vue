@@ -3,19 +3,21 @@
     <div class="header-container">
       <header class="header u-max-page-width">
         <g-link class="header__link" to="/">Marlene Hollands</g-link>
-        <nav class="nav" :class="{ 'nav--visible': this.isMobileMenuVisible }">
-          <g-link
-            v-for="navItem in navItems"
-            class="nav__link"
-            active-class="nav__link--active"
-            :to="navItem.to"
-            :key="navItem.to"
-            >{{ navItem.name }}</g-link
-          >
-        </nav>
-        <button class="menu-button" type="button" @click="onMenuButtonClick">
-          <img class="menu-button__icon" :src="isMobileMenuVisible ? '../close.png' : '../menu.png'" alt="Menü" />
-        </button>
+        <div>
+          <button class="menu-button" type="button" @click="onMenuButtonClick">
+            <img class="menu-button__icon" :src="isMobileMenuVisible ? '../close.svg' : '../menu.svg'" alt="Menü" />
+          </button>
+          <nav class="nav" :class="{ 'nav--visible': this.isMobileMenuVisible }">
+            <g-link
+              v-for="navItem in navItems"
+              class="nav__link"
+              active-class="nav__link--active"
+              :to="navItem.to"
+              :key="navItem.to"
+              >{{ navItem.name }}</g-link
+            >
+          </nav>
+        </div>
       </header>
     </div>
 
@@ -27,7 +29,15 @@
     </main>
     <div class="footer-container">
       <footer class="footer u-max-page-width">
+        <div class="footer__author">
+          erstellt durch
+          <a class="footer__author-link" href="https://pascalchorus.de" target="_blank" rel="noopener"
+            >pascalchorus.de</a
+          >
+        </div>
+
         <social-media-links class="footer__social" />
+
         <div class="footer__links">
           <g-link v-for="footerLink in footerLinks" class="footer__link" :to="footerLink.to" :key="footerLink.to">{{
             footerLink.name
@@ -120,10 +130,13 @@ export default {
 }
 
 .header-container {
-  background-color: $primary-color;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 16px 0 $shadow-default-color;
 }
 
 .header {
+  height: $header-height;
   width: 100%;
   max-width: $max-content-width;
   display: flex;
@@ -131,10 +144,9 @@ export default {
   justify-content: space-between;
 
   &__link {
+    font-weight: 300;
     font-size: $font-size-xl;
-    color: $font-color-white;
     display: block;
-    margin: $space-s 0;
   }
 }
 
@@ -146,20 +158,13 @@ export default {
     padding: $space-xs 0 $space-xs - $tabs-border-bottom-width 0;
     margin: 0 $space-s;
 
-    color: $font-color-white;
     border-bottom: $tabs-border-bottom-width solid transparent;
 
     &:hover {
-      color: $font-color-white-light;
       border-color: $tabs-border-bottom-color-hover;
     }
 
-    &:active {
-      color: $font-color-white-dark;
-    }
-
     &--active {
-      color: $font-color-white;
       border-color: $tabs-border-bottom-color-selected;
     }
   }
@@ -168,9 +173,6 @@ export default {
 .menu-button {
   display: none;
   font-size: $size-m;
-  position: absolute;
-  top: $size-s;
-  right: $size-s;
   height: $size-l;
   width: $size-l;
 
@@ -186,17 +188,26 @@ export default {
 }
 
 .footer-container {
-  background-color: $dark-gray;
+  background-color: $background-color-dark;
 }
 
 .footer {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
 
+  &__author {
+    color: $primary-color;
+    font-size: $font-size-s;
+  }
+
+  &__author-link {
+    color: $font-color-white;
+  }
+
   &__social {
-    padding: $space-s;
+    padding: $space-s 0;
   }
 
   &__links {
@@ -225,8 +236,6 @@ export default {
   }
 
   .header {
-    display: block;
-
     &__link {
       font-size: $font-size-l;
     }
@@ -234,14 +243,31 @@ export default {
 
   .nav {
     display: none;
+    background-color: $background-color-default;
+    border-radius: $border-radius-small;
+    min-width: 30vw;
+    box-shadow: 0 0 50px -22px $shadow-default-color;
 
     &--visible {
       display: block;
+      position: absolute;
+      top: $header-height + $size-xs;
+      right: $size-xs;
     }
 
     &__link {
       padding: $space-s 0;
       border-bottom: none;
+    }
+  }
+}
+
+@media (max-width: $max-width-mobile) {
+  .footer {
+    flex-direction: column-reverse;
+
+    &__author {
+      padding: $size-s;
     }
   }
 }

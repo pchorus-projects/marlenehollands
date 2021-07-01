@@ -51,7 +51,7 @@ export default {
   padding-bottom: $space-xl;
 
   &--alternate-background {
-    background-color: $background-color-gray;
+    background-color: $background-color-alternate;
   }
 }
 </style>
