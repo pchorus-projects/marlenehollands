@@ -400,13 +400,13 @@ Freundliche Grüße
   }
 
   &__request-link {
-    color: $font-color-default;
-    background-color: $accent-color-x-light;
-    padding: 0 4px;
+    color: $font-color-white;
+    background-color: $accent-color;
+    padding: $space-xxs $space-xs;
     border-radius: 2px;
 
     &:hover {
-      background-color: $accent-color-xx-light;
+      background-color: $accent-color-light;
     }
   }
 }
