@@ -2,7 +2,7 @@
   <Layout>
     <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
       <h1 class="heading heading--xxl heading--xxl-paragraph">Grußkarten</h1>
-      <p>
+      <p class="u-font-m">
         Glückwünsche auf Karten mit Engeln zu übermitteln ist immer wieder eine wunderbare Möglichkeit, das Besondere
         hervorzuheben!
       </p>
