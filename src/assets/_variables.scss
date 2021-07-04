@@ -14,11 +14,11 @@ $accent-color-dark: $primary-color-dark;
 $danger-color: darken(red, 12%);
 
 $font-color-default: #333333;
-$font-color-white: #E0E0E0;
+$font-color-white: #e0e0e0;
 $font-color-white-light: lighten($font-color-white, 10%);
 $font-color-white-dark: darken($font-color-white, 10%);
-$font-family-default: "Roboto", Arial, sans-serif;
-$font-family-header-default: "Antic Slab", Arial, sans-serif;
+$font-family-default: 'Roboto', Arial, sans-serif;
+$font-family-header-default: 'Antic Slab', Arial, sans-serif;
 
 $font-color-secondary: #707070;
 
@@ -70,7 +70,7 @@ $button-font-size: $font-size-default;
 $button-border-radius: $border-radius-small;
 $button-padding: $space-xs;
 
-$primary-button-color: #FFFFFF;
+$primary-button-color: #ffffff;
 $primary-button-background-color: $accent-color;
 $primary-button-hover-background-color: $accent-color-light;
 $primary-button-active-background-color: $accent-color-dark;
@@ -80,11 +80,11 @@ $secondary-button-background-color: transparent;
 $secondary-button-hover-background-color: $accent-color-xx-light;
 $secondary-button-active-background-color: $accent-color-x-light;
 
-$shadow-default-color: #BBBBBB;
+$shadow-default-color: #bbbbbb;
 
-$input-background-color-default: #F5F5F5;
+$input-background-color-default: #f5f5f5;
 
-$background-color-default: #FFFFFF;
+$background-color-default: #ffffff;
 $background-color-alternate: #fafafa;
 $background-color-dark: $primary-color-x-dark;
 
