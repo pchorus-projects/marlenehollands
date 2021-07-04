@@ -3,6 +3,7 @@
 
 import '~/assets/styles.scss';
 import DefaultLayout from '~/layouts/Default.vue';
+import VueGtag from 'vue-gtag';
 import { siteName, siteUrl } from '../gridsome.config';
 
 export default function (Vue, { head }) {
@@ -10,6 +11,11 @@ export default function (Vue, { head }) {
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
+
+  Vue.use(VueGtag, {
+    config: { id: 'G-X3SX21GC47', params: { anonymize_ip: true } },
+    bootstrap: false,
+  });
 
   // TODO: remove when website is live
   head.meta.push({
