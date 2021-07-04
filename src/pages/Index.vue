@@ -80,8 +80,7 @@ export default {
     return {
       aquarelle: {
         header: 'Aquarelle',
-        text:
-          'Die Aquarellmalerei ist eine sehr vielseitige Maltechnik, sie besticht durch ihre Tiefe und Leuchtkraft. Die leuchtende und lebendige Qualität kann mit einigen Techniken, z.B. Trocken-auf Nass; Nass-auf-Trocken; Trocken-auf-Trocken; Nass-in-Nass auf Papier oder Keilrahmen ausgeführt werden. Es können auch noch diverse Zusätze wie Salz, Folie oder Alkohol mit ins Spiel gebracht werden.',
+        text: 'Die Aquarellmalerei ist eine sehr vielseitige Maltechnik, sie besticht durch ihre Tiefe und Leuchtkraft. Die leuchtende und lebendige Qualität kann mit einigen Techniken, z.B. Trocken-auf Nass; Nass-auf-Trocken; Trocken-auf-Trocken; Nass-in-Nass auf Papier oder Keilrahmen ausgeführt werden. Es können auch noch diverse Zusätze wie Salz, Folie oder Alkohol mit ins Spiel gebracht werden.',
         image: {
           altText: 'Aquarelle',
           path: 'images/kasturi-roy-Ax_ET5_BdGI-unsplash.jpg',
@@ -93,8 +92,7 @@ export default {
       },
       acrylbilder: {
         header: 'Acrylbilder',
-        text:
-          'Acryl ist eine wunderbare Malfarbe, die mit vielen Malmitteln durch Mischtechniken zu verwenden ist, z.B. Strukturpaste, Sand, Kaffee, Papier, Fotos, Naturmaterialien. Alles ist möglich. Der Fantasie ist kaum eine Grenze gesetzt.',
+        text: 'Acryl ist eine wunderbare Malfarbe, die mit vielen Malmitteln durch Mischtechniken zu verwenden ist, z.B. Strukturpaste, Sand, Kaffee, Papier, Fotos, Naturmaterialien. Alles ist möglich. Der Fantasie ist kaum eine Grenze gesetzt.',
         image: {
           altText: 'Werkzeuge für Acrylmalerei',
           path: 'images/steve-johnson-ZXWOrKZ0h_M-unsplash.jpg',
@@ -106,8 +104,7 @@ export default {
       },
       grusskarten: {
         header: 'Grußkarten',
-        text:
-          'Glückwünsche auf Karten mit Engeln zu übermitteln ist immer wieder eine wunderbare Möglichkeit, das Besondere hervorzuheben!',
+        text: 'Glückwünsche auf Karten mit Engeln zu übermitteln ist immer wieder eine wunderbare Möglichkeit, das Besondere hervorzuheben!',
         image: {
           altText: 'Grußkarte',
           path: 'images/elena-mozhvilo-H1Vqo1T4Msk-unsplash.jpg',

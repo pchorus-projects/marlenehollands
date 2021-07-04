@@ -6,8 +6,8 @@
     "develop": "PRISMIC_REF=$(node scripts/prismic-master-ref.js) gridsome develop",
     "explore": "gridsome explore",
     "lint": "eslint \"src/**/*.{vue,js}\"",
-    "prettier": "prettier --write \"./src/**/*.{js,json,ts,vue}\" \"./*.{js,json,ts,vue}\"",
-    "prettier-check": "prettier --check \"./src/**/*.{js,json,ts,vue}\" \"./*.{js,json,ts,vue}\""
+    "prettier": "prettier --write \"./src/**/*.{js,json,ts,vue,scss}\" \"./*.{js,json,ts,vue,scss}\"",
+    "prettier-check": "prettier --check \"./src/**/*.{js,json,ts,vue,scss}\" \"./*.{js,json,ts,vue,scss}\""
   },
   "dependencies": {
     "gridsome": "^0.7.23",
