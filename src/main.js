@@ -17,12 +17,6 @@ export default function (Vue, { head }) {
     bootstrap: false,
   });
 
-  // TODO: remove when website is live
-  head.meta.push({
-    name: 'robots',
-    content: 'noindex',
-  });
-
   addMetaTag('application-name', siteName);
   addMetaTag('apple-mobile-web-app-title', siteName);
   addMetaTag('og:type', 'website');
