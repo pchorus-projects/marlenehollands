@@ -22,5 +22,8 @@ module.exports = {
         },
       },
     },
+    {
+      use: '@gridsome/plugin-sitemap',
+    },
   ],
 };
