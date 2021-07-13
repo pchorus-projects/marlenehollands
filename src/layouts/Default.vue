@@ -36,8 +36,6 @@
           >
         </div>
 
-        <social-media-links class="footer__social" />
-
         <div class="footer__links">
           <g-link v-for="footerLink in footerLinks" class="footer__link" :to="footerLink.to" :key="footerLink.to">{{
             footerLink.name
@@ -51,11 +49,10 @@
 
 <script>
 import CookiePolicyModal from '../components/CookiePolicyModal';
-import SocialMediaLinks from '../components/SocialMediaLinks';
 import { bootstrapGtag, STATISTICS_COOKIES_COOKIE_NAME } from '../utils';
 
 export default {
-  components: { CookiePolicyModal, SocialMediaLinks },
+  components: { CookiePolicyModal },
   data: function () {
     return {
       isModalVisible: false,
@@ -204,10 +201,6 @@ export default {
 
   &__author-link {
     color: $font-color-white;
-  }
-
-  &__social {
-    padding: $space-s 0;
   }
 
   &__links {
