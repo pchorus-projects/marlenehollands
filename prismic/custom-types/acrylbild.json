@@ -20,12 +20,6 @@
         "label": "Beschreibung"
       }
     },
-    "date": {
-      "type": "Date",
-      "config": {
-        "label": "Datum"
-      }
-    },
     "height": {
       "type": "Number",
       "config": {
@@ -41,7 +35,7 @@
     "technique": {
       "type": "Select",
       "config": {
-        "options": ["Technik 1", "Technik 2"],
+        "options": ["Mischtechnik", "Collage", "Spachteltechnik"],
         "label": "Technik"
       }
     },

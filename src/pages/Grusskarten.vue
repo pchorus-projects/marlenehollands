@@ -22,7 +22,6 @@ query Grusskarten {
           _meta {
             uid
           }
-          date
           image
           title
           description
