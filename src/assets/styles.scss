@@ -317,15 +317,6 @@ strong {
       @extend .u-font-xxl--paragraph;
     }
   }
-
-  &--hero {
-    position: absolute;
-    color: $accent-color;
-    font-size: 80px;
-    line-height: 96px;
-    bottom: 120px;
-    right: 80px;
-  }
 }
 
 .section {
@@ -448,41 +439,12 @@ strong {
   }
 }
 
-@media (max-width: $max-width-tablet) {
-  .heading {
-    &--hero {
-      bottom: 80px;
-    }
-  }
-}
-
 @media (max-width: $max-width-mobile-landscape) {
-  .heading {
-    &--hero {
-      font-size: 64px;
-      line-height: 72px;
-      bottom: 40px;
-      right: 80px;
-    }
-  }
-
   .u-text-columns {
     flex-direction: column;
     :not(:last-child) {
       margin-right: 0;
       margin-bottom: $space-xl;
-    }
-  }
-}
-
-@media (max-width: $max-width-mobile) {
-  .heading {
-    &--hero {
-      font-size: 40px;
-      line-height: 56px;
-      bottom: 20px;
-      right: 20px;
-      left: 20px;
     }
   }
 }
