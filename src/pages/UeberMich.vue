@@ -3,11 +3,16 @@
     <div class="text">
       <section class="u-max-page-width">
         <h1 class="heading heading--xxl heading--xxl-paragraph">Über mich</h1>
-        <p class="u-font-m">
-          Meine Kenntnisse der Malerei, sind autodidaktisch, ich habe Kurse bei hiesigen Künstler/Innen besucht sowie
-          Wochenendkurse in der Akademie Klostersteinfeld und der Kunstakademie Heimbach. Um weitere künstlerische
-          Erfahrungen, Tipps und neue Techniken zu erfahren und zu erlernen, bilde ich mich in Kursen ständig weiter.
-        </p>
+        <div class="text-with-portrait">
+          <p class="text-with-portrait__text u-font-m">
+            Meine Kenntnisse der Malerei sind autodidaktisch, ich habe Kurse bei hiesigen Künstler/Innen besucht sowie
+            Wochenendkurse in der Akademie Klostersteinfeld und der Kunstakademie Heimbach. Um weitere künstlerische
+            Erfahrungen, Tipps und neue Techniken zu erfahren und zu erlernen, bilde ich mich in Kursen ständig weiter.
+          </p>
+          <div>
+            <g-image class="portrait" src="@/assets/images/marlenehollands.jpg"></g-image>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -38,7 +43,7 @@ import { getMetaInfo } from '../utils';
 export default {
   metaInfo: getMetaInfo(
     'Über mich',
-    'Hi, mein Name ist Pascal Chorus. Ich bin 35 Jahre alt und seit rund 15 Jahren bin ich als Software-Entwickler tätig. Ich lebe in Herzogenrath in der StädteRegion Aachen und arbeite in Köln.'
+    'Meine Kenntnisse der Malerei sind autodidaktisch, ich habe Kurse bei hiesigen Künstler/Innen besucht sowie Wochenendkurse in der Akademie Klostersteinfeld und der Kunstakademie Heimbach.'
   ),
 };
 </script>
@@ -46,12 +51,40 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/variables';
 
+.text-with-portrait {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin-right: $space-l;
+  }
+}
+
+.portrait {
+  display: inline-block;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: $border-radius-default;
+}
+
 .text {
   padding-top: $space-xl;
   padding-bottom: $space-xl;
 
   &--alternate-background {
     background-color: $background-color-alternate;
+  }
+}
+
+@media (max-width: $max-width-mobile) {
+  .text-with-portrait {
+    flex-direction: column-reverse;
+
+    &__text {
+      margin-top: $space-l;
+      margin-right: 0;
+    }
   }
 }
 </style>
