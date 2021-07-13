@@ -20,12 +20,6 @@
         "label": "Beschreibung"
       }
     },
-    "date": {
-      "type": "Date",
-      "config": {
-        "label": "Datum"
-      }
-    },
     "height": {
       "type": "Number",
       "config": {

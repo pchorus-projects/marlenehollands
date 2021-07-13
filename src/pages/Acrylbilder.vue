@@ -23,7 +23,6 @@ query Acrylbilder {
           _meta {
             uid
           }
-          date
           image
           title
           technique

@@ -24,7 +24,6 @@ query Aquarelle {
           _meta {
             uid
           }
-          date
           image
           title
           description
