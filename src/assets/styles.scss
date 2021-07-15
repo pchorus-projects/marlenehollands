@@ -397,6 +397,10 @@ strong {
   display: block;
 }
 
+.u-inline-block {
+  display: inline-block;
+}
+
 .text-block {
   h1 {
     @extend .heading;

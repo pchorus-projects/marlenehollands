@@ -3,9 +3,13 @@
     <div class="description" :class="{ 'description--alternate': isAlternate }">
       <h2 class="heading heading--xl heading--xl-paragraph" v-html="data.header"></h2>
       <p class="u-font-m">{{ data.text }}</p>
-      <g-link v-if="data.link" :to="data.link.path" :aria-label="data.link.text" class="link u-block u-margin-top-m">{{
-        data.link.text
-      }}</g-link>
+      <g-link
+        v-if="data.link"
+        :to="data.link.path"
+        :aria-label="data.link.text"
+        class="link u-inline-block u-margin-top-m"
+        >{{ data.link.text }}</g-link
+      >
     </div>
     <g-image
       v-if="data.image"
