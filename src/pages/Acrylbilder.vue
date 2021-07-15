@@ -44,8 +44,7 @@ export default {
   components: { PhotoSwipe },
   metaInfo: getMetaInfo(
     'Acrylbilder',
-    // TODO: Fix description text.
-    'Acrylbilder'
+    'Acryl ist eine wunderbare Malfarbe, die mit vielen Malmitteln durch Mischtechniken zu verwenden ist, z.B. Strukturpaste, Sand, Kaffee, Papier, Fotos, Naturmaterialien.'
   ),
   data() {
     return {

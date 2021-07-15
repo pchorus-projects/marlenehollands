@@ -22,7 +22,7 @@ export default function (Vue, { head }) {
   addMetaTag('og:type', 'website');
   addMetaTag('og:title', siteName);
   addMetaTag('og:url', siteUrl);
-  addMetaTag('og:image', `${siteUrl}/og-image.png`);
+  addMetaTag('og:image', `${siteUrl}/og-image.jpg`);
   addMetaTag('og:locale', 'de_DE');
   addMetaTag('twitter:card', 'summary');
 }

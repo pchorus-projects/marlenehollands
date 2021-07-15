@@ -10,7 +10,11 @@
             Erfahrungen, Tipps und neue Techniken zu erfahren und zu erlernen, bilde ich mich in Kursen ständig weiter.
           </p>
           <div>
-            <g-image class="portrait" src="@/assets/images/marlenehollands.jpg"></g-image>
+            <g-image
+              class="portrait"
+              src="@/assets/images/marlenehollands.jpg"
+              alt="Portrait Marlene Hollands"
+            ></g-image>
           </div>
         </div>
       </section>

@@ -1,14 +1,12 @@
 <template>
   <Layout>
-    <section class="u-max-page-width u-margin-top-xl u-margin-bottom-xl">
-      <h1 class="heading heading--xxl heading--xxl-paragraph">Termine</h1>
-      <p class="u-font-m">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste
-        tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-      </p>
+    <section class="section section--alternate">
+      <h1 class="heading heading--xxl heading--xxl-paragraph u-max-page-width">Aktuelle Termine</h1>
+      <upcoming-dates class="u-max-page-width"></upcoming-dates>
     </section>
-    <section class="u-max-page-width u-margin-bottom-xl">
-      <ul v-for="yearAndDates in datesPerYear" :key="yearAndDates.year">
+    <section class="section">
+      <h2 class="heading heading--xxl heading--xxl-paragraph u-max-page-width">Vergangene Termine</h2>
+      <ul class="u-max-page-width" v-for="yearAndDates in datesPerYear" :key="yearAndDates.year">
         <li class="u-margin-bottom-xl">
           <p class="heading heading--l heading--xs-paragraph">{{ yearAndDates.year }}</p>
           <ul v-for="date in yearAndDates.dates" :key="`${date.title}-${date.year}`">
@@ -45,13 +43,11 @@ query PastDates {
 
 <script>
 import { getMetaInfo } from '../utils';
+import UpcomingDates from '../components/UpcomingDates';
 
 export default {
-  metaInfo: getMetaInfo(
-    'Termine',
-    // TODO: Fix description text.
-    'Termine'
-  ),
+  components: { UpcomingDates },
+  metaInfo: getMetaInfo('Termine', 'Aktuelle und vergangene Ausstellungen.'),
   data() {
     return {
       datesPerYear: [],
