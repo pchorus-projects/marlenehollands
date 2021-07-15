@@ -40,8 +40,7 @@ export default {
   components: { PhotoSwipe },
   metaInfo: getMetaInfo(
     'Grußkarten',
-    // TODO: Fix description text.
-    'Grußkarten'
+    'Glückwünsche auf Karten mit Engeln zu übermitteln ist immer wieder eine wunderbare Möglichkeit, das Besondere hervorzuheben!'
   ),
   data() {
     return {

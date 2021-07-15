@@ -44,8 +44,7 @@ export default {
   components: { PhotoSwipe },
   metaInfo: getMetaInfo(
     'Aquarelle',
-    // TODO: Fix description text.
-    'Aquarelle'
+    'Die Aquarellmalerei ist eine sehr vielseitige Maltechnik, sie besticht durch ihre Tiefe und Leuchtkraft.'
   ),
   data() {
     return {

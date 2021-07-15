@@ -33,14 +33,13 @@
 </template>
 
 <script>
+import { getMetaInfo } from '../utils';
 import TextAndImage from '../components/TextAndImage';
 import UpcomingDates from '../components/UpcomingDates';
 
 export default {
   components: { TextAndImage, UpcomingDates },
-  metaInfo: {
-    title: 'Marlene Hollands',
-  },
+  metaInfo: getMetaInfo('Marlene Hollands', 'Herzlich Willkommen in meiner digitalen Ausstellung!'),
   data() {
     return {
       marlene: {

@@ -47,11 +47,7 @@ import UpcomingDates from '../components/UpcomingDates';
 
 export default {
   components: { UpcomingDates },
-  metaInfo: getMetaInfo(
-    'Termine',
-    // TODO: Fix description text.
-    'Termine'
-  ),
+  metaInfo: getMetaInfo('Termine', 'Aktuelle und vergangene Ausstellungen.'),
   data() {
     return {
       datesPerYear: [],
