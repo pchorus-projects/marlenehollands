@@ -10,7 +10,11 @@
         {{ new Date(upcomingDate.node.start).toLocaleDateString() }} -
         {{ new Date(upcomingDate.node.end).toLocaleDateString() }}
       </p>
-      <p class="u-font-m" v-html="upcomingDate.node.address[0].text.replace(/\n/g, '<br />')"></p>
+      <p
+        v-if="upcomingDate.node.address"
+        class="u-font-m"
+        v-html="upcomingDate.node.address[0].text.replace(/\n/g, '<br />')"
+      ></p>
       <a
         v-if="upcomingDate.node.link"
         style="display: block"
